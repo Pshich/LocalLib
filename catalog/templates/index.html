@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Местная библиотека</h1>
+
+  <p>Добро пожаловать <em>в нашу библиотеку</em>, простейший сайт разработанный в Django сайтом Mozilla developers network.</p>
+
+<h2>Сведения об архиве:</h2>
+
+  <ul>
+    <li><strong>Книги:</strong> {{ num_books }}</li>
+    <li><strong>Экземпляры:</strong> {{ num_instances }}</li>
+    <li><strong>Доступны:</strong> {{ num_instances_available }}</li>
+    <li><strong>Авторы:</strong> {{ num_authors }}</li>
+  </ul>
+
+<p>Вы уже посещали эту страницу {{ num_visits }} раз {% if num_visits > 1 %} {% endif %}.</p>
+
+
+{% endblock %}
